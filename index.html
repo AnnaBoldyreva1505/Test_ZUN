@@ -139,7 +139,7 @@
             createSelect(competency) {
                 const select = document.createElement('select');
                 select.innerHTML = `
-                    <option value="">Выберите характеристику...</option>
+                    <option value="">Выбери характеристику...</option>
                     ${choices.map(choice => `
                         <option value="${choice}" ${this.answers[competency.id] === choice ? 'selected' : ''}>
                             ${choice}
@@ -181,7 +181,7 @@
                                     ''}
                             </div>
                             <select id="select-${competency.id}">
-                                <option value="">Выберите характеристику...</option>
+                                <option value="">Выбери характеристику...</option>
                                 ${choices.map(choice => `
                                     <option value="${choice}" ${this.answers[competency.id] === choice ? 'selected' : ''}>
                                         ${choice}
@@ -201,7 +201,7 @@
                         <div class="feedback ${this.allCorrect() ? 'success' : 'error'}">
                             ${this.allCorrect() ? 
                                 'Отлично! Все ответы правильные! 🎉' : 
-                                'Есть ошибки. Попробуйте еще раз! 🤔'}
+                                'Есть ошибки. Попробуй еще раз! 🤔'}
                         </div>
                     ` : ''}
                 `;
